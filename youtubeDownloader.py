@@ -1,15 +1,15 @@
+import os
 from pytube import YouTube
-from sys import argv	
 
-arg_target_link = argv[1]
-
+current_dir = os.getcwd()
+arg_target_link = input("Enter YouTube Link: \n")
 yt = YouTube(arg_target_link)
 
+print()
 print("Title:", yt.title)
+print("Published:", yt.publish_date)
 print("Views:", yt.views)
 
-
 yd = yt.streams.get_by_itag(18)
-
-yd.download("C:\\Users\\Romrauq\\Downloads\\YoutubeDownloader")
+yd.download(current_dir + "\Output Folder")
 
