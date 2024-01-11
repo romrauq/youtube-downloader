@@ -11,5 +11,4 @@ print("Published:", yt.publish_date)
 print("Views:", yt.views)
 
 yd = yt.streams.get_by_itag(18)
-yd.download(current_dir + "\Output Folder")
-
+yd.download(current_dir + "\Downloads")
